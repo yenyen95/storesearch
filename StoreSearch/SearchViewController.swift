@@ -24,6 +24,8 @@ class SearchViewController: UIViewController {
     
     var isLoading = false
     
+    var dataTask: URLSessionDataTask?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -53,7 +55,7 @@ class SearchViewController: UIViewController {
     // MARK:- Private Methods
     func iTunesURL(searchText: String) -> URL {
         let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200", encodedText)
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=50", encodedText)
         let url = URL(string: urlString)
         
         return url!
@@ -88,6 +90,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
+            dataTask?.cancel()
             isLoading = true
             tableView.reloadData()
             
@@ -97,10 +100,11 @@ extension SearchViewController: UISearchBarDelegate {
             let url = iTunesURL(searchText: searchBar.text!)
             let session = URLSession.shared
             
-            let dataTask = session.dataTask(with: url) {
+            dataTask = session.dataTask(with: url) {
                 data, response, error in
-                if let error = error {
+                if let error = error as NSError?, error.code == -999 {
                     print("ERROR : '\(error)'")
+                    return
                 } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                     if let data = data {
                         self.searchResults = self.parse(data: data)
@@ -122,7 +126,7 @@ extension SearchViewController: UISearchBarDelegate {
                     self.showNetworkError()
                 }
             }
-            dataTask.resume()
+            dataTask?.resume()
         }
     }
     
