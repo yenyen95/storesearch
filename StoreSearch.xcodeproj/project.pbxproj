@@ -16,7 +16,6 @@
 		CC73DD86212D980D00D9A541 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD85212D980D00D9A541 /* SearchResultCell.swift */; };
 		CC73DD88212D9A9A00D9A541 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC73DD87212D9A9A00D9A541 /* NothingFoundCell.xib */; };
 		CC73DD8A212EED4E00D9A541 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC73DD89212EED4E00D9A541 /* LoadingCell.xib */; };
-		CC73DD8C2133E83D00D9A541 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD8B2133E83D00D9A541 /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		CC73DD85212D980D00D9A541 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		CC73DD87212D9A9A00D9A541 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		CC73DD89212EED4E00D9A541 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		CC73DD8B2133E83D00D9A541 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 		CC73DD6E212CA89000D9A541 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
-				CC73DD8B2133E83D00D9A541 /* UIImageView+DownloadImage.swift */,
 				CC73DD6F212CA89000D9A541 /* AppDelegate.swift */,
 				CC73DD71212CA89000D9A541 /* SearchViewController.swift */,
 				CC73DD73212CA89000D9A541 /* Main.storyboard */,
@@ -156,7 +153,6 @@
 				CC73DD82212D62B200D9A541 /* SearchResult.swift in Sources */,
 				CC73DD86212D980D00D9A541 /* SearchResultCell.swift in Sources */,
 				CC73DD70212CA89000D9A541 /* AppDelegate.swift in Sources */,
-				CC73DD8C2133E83D00D9A541 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
