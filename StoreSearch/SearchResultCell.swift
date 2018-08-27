@@ -51,7 +51,7 @@ class SearchResultCell: UITableViewCell {
         
         atworkImage.image = UIImage(named: "Placeholder")
         if let smallUrl = URL(string: result.imageSmall) {
-            print("*** SMALL URL = '\(smallUrl)'")
+            //print("*** SMALL URL = '\(smallUrl)'")
             downloadTask = atworkImage.loadImage(url: smallUrl)
         }
     }
