@@ -64,6 +64,7 @@
 		CC73DD6E212CA89000D9A541 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CC73DD8B2133E83D00D9A541 /* UIImageView+DownloadImage.swift */,
 				CC73DD6F212CA89000D9A541 /* AppDelegate.swift */,
 				CC73DD71212CA89000D9A541 /* SearchViewController.swift */,
 				CC73DD73212CA89000D9A541 /* Main.storyboard */,
@@ -74,7 +75,6 @@
 				CC73DD83212D938A00D9A541 /* SearchResultCell.xib */,
 				CC73DD87212D9A9A00D9A541 /* NothingFoundCell.xib */,
 				CC73DD89212EED4E00D9A541 /* LoadingCell.xib */,
-				CC73DD8B2133E83D00D9A541 /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
