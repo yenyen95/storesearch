@@ -28,6 +28,7 @@ class SearchResult: Codable, CustomStringConvertible {
     var imageSmall = ""
     var imageLarge = ""
     
+    
     enum CodingKeys: String, CodingKey {
         case imageSmall = "artworkUrl60"
         case imageLarge = "artworkUrl100"
