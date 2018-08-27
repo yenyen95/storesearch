@@ -18,10 +18,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
     
+    var searchResult: SearchResult!
+    
+    var downloadTask: URLSessionDownloadTask?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         modalPresentationStyle = .custom
         transitioningDelegate = self
+    }
+    
+    deinit {
+        print("deinit \(self)")
+        downloadTask?.cancel()
     }
 
     override func viewDidLoad() {
@@ -36,6 +45,10 @@ class DetailViewController: UIViewController {
         gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = self
         view.addGestureRecognizer(gestureRecognizer)
+        
+        if searchResult != nil {
+            updateUI()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,6 +71,46 @@ class DetailViewController: UIViewController {
     // MARK:- Actions
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func openInStore() {
+        if let url = URL(string: searchResult.storeURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
+    // MARK:- Private methods
+    func updateUI() {
+        nameLabel.text! = searchResult.name
+        if searchResult.artistName.isEmpty {
+            artistNameLabel.text = "Unknown"
+        } else {
+            artistNameLabel.text = searchResult.artistName
+        }
+        kindLabel.text = searchResult.type
+        genreLabel.text = searchResult.genre
+        
+        // Show Price
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = searchResult.currency
+        
+        let priceText: String
+        if searchResult.price == 0 {
+            priceText = "free"
+        } else if let text = formatter.string(from: searchResult.price as NSNumber) {
+            priceText = text
+        } else {
+            priceText = ""
+        }
+        
+        priceButton.setTitle(priceText, for: .normal)
+        
+        // Get image
+        if let largeURL = URL(string: searchResult.imageLarge) {
+            downloadTask = artworkImageView.loadImage(url: largeURL)
+        }
     }
 
 }

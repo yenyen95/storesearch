@@ -156,6 +156,16 @@ extension SearchViewController: UISearchBarDelegate {
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
     }
+    
+    // MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            
+            let indexPath = sender as! IndexPath
+            detailViewController.searchResult = searchResults[indexPath.row]
+        }
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -188,7 +198,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellsIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
                 let searchResult = searchResults[indexPath.row]
                 
-               cell.configure(for: searchResult)
+                cell.configure(for: searchResult)
                 
                 return cell
             }
@@ -197,6 +207,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     
