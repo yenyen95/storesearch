@@ -43,6 +43,7 @@ class Search {
                         self.searchResults.sort(by: <)
                         self.isLoading = false
                         success = true
+                        print("SUCESS")
                     }
                 } else {
                     print("FAILURE : '\(response!)'")
