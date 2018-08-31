@@ -58,7 +58,16 @@ class LandscapeViewController: UIViewController {
         
         if firstTime {
             firstTime = false
-            titleButtons(search.searchResults)
+            switch search.state {
+            case .notSearchedYet:
+                break
+            case .loading:
+                break
+            case .noResults:
+                break
+            case .results(let list):
+                tileButtons(list)
+            }
         }
     }
 
@@ -79,7 +88,7 @@ class LandscapeViewController: UIViewController {
     */
     
     // MARK:- Private Methods
-    private func titleButtons(_ searchResults: [SearchResult]) {
+    private func tileButtons(_ searchResults: [SearchResult]) {
         var columnsPerPage = 5
         var rowsPerPage = 3
         var itemWidth: CGFloat = 96
