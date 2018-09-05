@@ -13,6 +13,8 @@
 		CC3E531721398626008F3D3A /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3E531921398626008F3D3A /* NothingFoundCell.xib */; };
 		CC3E531B2139879D008F3D3A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3E531D2139879D008F3D3A /* LoadingCell.xib */; };
 		CC3E5322213989FF008F3D3A /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3E5324213989FF008F3D3A /* SearchResultCell.xib */; };
+		CC3E5327214064E3008F3D3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC3E5329214064E3008F3D3A /* Localizable.strings */; };
+		CC3E532D214067A5008F3D3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC3E532F214067A5008F3D3A /* InfoPlist.strings */; };
 		CC73DD70212CA89000D9A541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD6F212CA89000D9A541 /* AppDelegate.swift */; };
 		CC73DD72212CA89000D9A541 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD71212CA89000D9A541 /* SearchViewController.swift */; };
 		CC73DD75212CA89000D9A541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC73DD73212CA89000D9A541 /* Main.storyboard */; };
@@ -37,6 +39,10 @@
 		CC3E531F2139882B008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
 		CC3E532121398944008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		CC3E5323213989FF008F3D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
+		CC3E5328214064E3008F3D3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC3E532A214065AC008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC3E532E214067A5008F3D3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC3E5330214067A6008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC73DD6C212CA89000D9A541 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC73DD6F212CA89000D9A541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC73DD71212CA89000D9A541 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 				CCFFEB7E213531500010CAEA /* SlideOutAnimationController.swift */,
 				CC3E531321354CDC008F3D3A /* FadeOutAnimationController.swift */,
 				CC3E5315213683AE008F3D3A /* Search.swift */,
+				CC3E5329214064E3008F3D3A /* Localizable.strings */,
+				CC3E532F214067A5008F3D3A /* InfoPlist.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC73DD77212CA89100D9A541 /* Assets.xcassets in Resources */,
+				CC3E532D214067A5008F3D3A /* InfoPlist.strings in Resources */,
+				CC3E5327214064E3008F3D3A /* Localizable.strings in Resources */,
 				CC3E531B2139879D008F3D3A /* LoadingCell.xib in Resources */,
 				CC3E5322213989FF008F3D3A /* SearchResultCell.xib in Resources */,
 				CC3E531721398626008F3D3A /* NothingFoundCell.xib in Resources */,
@@ -223,6 +233,24 @@
 				CC3E5323213989FF008F3D3A /* Base */,
 			);
 			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		CC3E5329214064E3008F3D3A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC3E5328214064E3008F3D3A /* en */,
+				CC3E532A214065AC008F3D3A /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CC3E532F214067A5008F3D3A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC3E532E214067A5008F3D3A /* en */,
+				CC3E5330214067A6008F3D3A /* nl */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		CC73DD73212CA89000D9A541 /* Main.storyboard */ = {

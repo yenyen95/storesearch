@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SearchResultCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
