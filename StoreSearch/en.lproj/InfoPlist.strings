@@ -5,3 +5,5 @@
   Created by Aurélien Schneberger on 05/09/2018.
   Copyright © 2018 Aurélien Schneberger. All rights reserved.
 */
+
+CFBundleDisplayName = "StoreSearch";

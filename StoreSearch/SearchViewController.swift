@@ -30,7 +30,9 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        searchBar.becomeFirstResponder()
+        if UIDevice.current.userInterfaceIdiom != .pad {
+            searchBar.becomeFirstResponder()
+        }
         title = NSLocalizedString("Search", comment: "split view master button")
         
         // Tableview        
@@ -78,6 +80,15 @@ class SearchViewController: UIViewController {
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         print("Segment changed: \(sender.selectedSegmentIndex)")
         performSearch()
+    }
+    
+    private func hideMasterPane() {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.splitViewController!.preferredDisplayMode =
+                .primaryHidden
+        }, completion: { _ in
+            self.splitViewController!.preferredDisplayMode = .automatic
+        })
     }
     
     // MARKS:- Landscape - Portrait
@@ -215,6 +226,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             if case .results(let list) = search.state {
                 splitViewDetail?.searchResult = list[indexPath.row]
+            }
+            
+            if splitViewController!.displayMode != .allVisible {
+                hideMasterPane()
             }
         }
     }
