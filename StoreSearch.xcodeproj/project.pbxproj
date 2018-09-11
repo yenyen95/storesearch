@@ -15,6 +15,7 @@
 		CC3E5322213989FF008F3D3A /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3E5324213989FF008F3D3A /* SearchResultCell.xib */; };
 		CC3E5327214064E3008F3D3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC3E5329214064E3008F3D3A /* Localizable.strings */; };
 		CC3E532D214067A5008F3D3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC3E532F214067A5008F3D3A /* InfoPlist.strings */; };
+		CC3E53342146B955008F3D3A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E53332146B955008F3D3A /* MenuViewController.swift */; };
 		CC73DD70212CA89000D9A541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD6F212CA89000D9A541 /* AppDelegate.swift */; };
 		CC73DD72212CA89000D9A541 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73DD71212CA89000D9A541 /* SearchViewController.swift */; };
 		CC73DD75212CA89000D9A541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC73DD73212CA89000D9A541 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		CC3E532A214065AC008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CC3E532E214067A5008F3D3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC3E5330214067A6008F3D3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC3E53332146B955008F3D3A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CC73DD6C212CA89000D9A541 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC73DD6F212CA89000D9A541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC73DD71212CA89000D9A541 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				CC3E5315213683AE008F3D3A /* Search.swift */,
 				CC3E5329214064E3008F3D3A /* Localizable.strings */,
 				CC3E532F214067A5008F3D3A /* InfoPlist.strings */,
+				CC3E53332146B955008F3D3A /* MenuViewController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				CC3E5316213683AE008F3D3A /* Search.swift in Sources */,
 				CC73DD72212CA89000D9A541 /* SearchViewController.swift in Sources */,
 				CC73DD922133FAED00D9A541 /* DimmingPresentationController.swift in Sources */,
+				CC3E53342146B955008F3D3A /* MenuViewController.swift in Sources */,
 				CC3E531421354CDC008F3D3A /* FadeOutAnimationController.swift in Sources */,
 				CC73DD82212D62B200D9A541 /* SearchResult.swift in Sources */,
 				CC73DD86212D980D00D9A541 /* SearchResultCell.swift in Sources */,
